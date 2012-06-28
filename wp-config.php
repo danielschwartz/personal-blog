@@ -17,17 +17,33 @@
 // ** Heroku Postgres settings - from Heroku Environment ** //
 $db = parse_url($_ENV["DATABASE_URL"]);
 
-/** The name of the database for WordPress */
-define('DB_NAME', trim($db["path"],"/"));
 
-/** MySQL database username */
-define('DB_USER', $db["user"]);
+if($_ENV["DATABASE_URL"]){
+    /** The name of the database for WordPress */
+    define('DB_NAME', trim($db["path"],"/"));
 
-/** MySQL database password */
-define('DB_PASSWORD', $db["pass"]);
+    /** MySQL database username */
+    define('DB_USER', $db["user"]);
 
-/** MySQL hostname */
-define('DB_HOST', $db["host"]);
+    /** MySQL database password */
+    define('DB_PASSWORD', $db["pass"]);
+
+    /** MySQL hostname */
+    define('DB_HOST', $db["host"]);
+} else {
+    // Local Configs
+    /** The name of the database for WordPress */
+    define('DB_NAME', 'wordpress');
+
+    /** MySQL database username */
+    define('DB_USER', 'postgres');
+
+    /** MySQL database password */
+    define('DB_PASSWORD', 'password');
+
+    /** MySQL hostname */
+    define('DB_HOST', 'localhost');
+}
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
@@ -37,24 +53,13 @@ define('DB_COLLATE', '');
 
 
 
-// Local Configs
-/** The name of the database for WordPress */
-//define('DB_NAME', 'wordpress');
 
-/** MySQL database username */
-//define('DB_USER', 'postgres');
-
-/** MySQL database password */
-//define('DB_PASSWORD', 'tigger01');
-
-/** MySQL hostname */
-//define('DB_HOST', 'localhost');
 
 /** Database Charset to use in creating database tables. */
-//define('DB_CHARSET', 'utf8');
+define('DB_CHARSET', 'utf8');
 
 /** The Database Collate type. Don't change this if in doubt. */
-//define('DB_COLLATE', '');
+define('DB_COLLATE', '');
 
 /**#@+
  * Authentication Unique Keys and Salts.
