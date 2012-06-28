@@ -18,43 +18,43 @@
 $db = parse_url($_ENV["DATABASE_URL"]);
 
 /** The name of the database for WordPress */
-//define('DB_NAME', trim($db["path"],"/"));
+define('DB_NAME', trim($db["path"],"/"));
 
 /** MySQL database username */
-//define('DB_USER', $db["user"]);
+define('DB_USER', $db["user"]);
 
 /** MySQL database password */
-//define('DB_PASSWORD', $db["pass"]);
+define('DB_PASSWORD', $db["pass"]);
 
 /** MySQL hostname */
-//define('DB_HOST', $db["host"]);
-
-/** Database Charset to use in creating database tables. */
-//define('DB_CHARSET', 'utf8');
-
-/** The Database Collate type. Don't change this if in doubt. */
-//define('DB_COLLATE', '');
-
-
-
-// Local Configs
-/** The name of the database for WordPress */
-define('DB_NAME', 'wordpress');
-
-/** MySQL database username */
-define('DB_USER', 'postgres');
-
-/** MySQL database password */
-define('DB_PASSWORD', 'tigger01');
-
-/** MySQL hostname */
-define('DB_HOST', 'localhost');
+define('DB_HOST', $db["host"]);
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
 
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
+
+
+
+// Local Configs
+/** The name of the database for WordPress */
+//define('DB_NAME', 'wordpress');
+
+/** MySQL database username */
+//define('DB_USER', 'postgres');
+
+/** MySQL database password */
+//define('DB_PASSWORD', 'tigger01');
+
+/** MySQL hostname */
+//define('DB_HOST', 'localhost');
+
+/** Database Charset to use in creating database tables. */
+//define('DB_CHARSET', 'utf8');
+
+/** The Database Collate type. Don't change this if in doubt. */
+//define('DB_COLLATE', '');
 
 /**#@+
  * Authentication Unique Keys and Salts.
@@ -65,14 +65,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'put your unique phrase here');
-define('SECURE_AUTH_KEY',  'put your unique phrase here');
-define('LOGGED_IN_KEY',    'put your unique phrase here');
-define('NONCE_KEY',        'put your unique phrase here');
-define('AUTH_SALT',        'put your unique phrase here');
-define('SECURE_AUTH_SALT', 'put your unique phrase here');
-define('LOGGED_IN_SALT',   'put your unique phrase here');
-define('NONCE_SALT',       'put your unique phrase here');
+define('AUTH_KEY',         'iP}_cN$1OPyAxbMC)=VW+3e5tvVx?=oDD$GRU]]WdUfBSq(|a]u-h%~Y-pfS_6(g');
+define('SECURE_AUTH_KEY',  'jxGU2yt5>|(nT7|.#[K!ETry~}k,,<^BIpxwYnF+ERd@8p9N-m*ua^K>x-{2UK*e');
+define('LOGGED_IN_KEY',    'T2Al~K9&yI?T>wx~EzFY!<|l|<^)yEH5zf%=x&Z?6!>xf&2:).wyMiQ=dxckz( m');
+define('NONCE_KEY',        'Y1mKiVWi79L=b;]O8B+V$l]mTv}K>k(FY|(x!@zt]eiA7C`Zk~mne<wQzhf,_6xo');
+define('AUTH_SALT',        'A7ywQGSfz)TF<j-oVjIT6;%H%aLO`.xWUD1<1)?4r.i4 R8<OLEW,j$j!h+%-Yk9');
+define('SECURE_AUTH_SALT', '5(uP!pdmV~xf.]j[v()|}dCtsY8>n[50+Y$BKB&[]+,RWF`q,Dr2vA?BCy/G-yH{');
+define('LOGGED_IN_SALT',   '`gDke;RSYIW&QnaG)Y}N/ET0REF}02T !:z7hV||,Jy[%9Iu|PfI4s;,vAe5^GOu');
+define('NONCE_SALT',       'raVI]i|}+|6P59vOn(;OTJbKXAu5SUe-Zwv=;)S(buUTm;O~s-?)CK.U7|?uA/^X');
 
 /**#@-*/
 
