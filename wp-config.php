@@ -15,7 +15,7 @@
  */
 
 // ** Heroku Postgres settings - from Heroku Environment ** //
-$db = parse_url($_ENV["HEROKU_POSTGRESQL_BLACK_URL"]);
+$db = parse_url($_ENV["DATABASE_URL"]);
 
 /** The name of the database for WordPress */
 define('DB_NAME', trim($db["path"],"/"));
@@ -27,7 +27,7 @@ define('DB_USER', $db["user"]);
 define('DB_PASSWORD', $db["pass"]);
 
 /** MySQL hostname */
-define('DB_HOST', $db["host"] . ':' . $db["port"]);
+define('DB_HOST', $db["host"]);
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
