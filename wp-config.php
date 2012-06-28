@@ -15,7 +15,7 @@
  */
 
 // ** Heroku Postgres settings - from Heroku Environment ** //
-$db = parse_url($_ENV["DATABASE_URL"]);
+$db = parse_url($_ENV["HEROKU_POSTGRESQL_JADE_URL"]);
 
 /** The name of the database for WordPress */
 define('DB_NAME', trim($db["path"],"/"));
